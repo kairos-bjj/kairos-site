@@ -5,7 +5,7 @@ import cloudflareLogo from '../assets/cloudflare.svg'
 import heroImg from '../assets/hero.png'
 import './Home.css'
 
-function Home() {
+export function Home() {
   const [count, setCount] = useState(0)
   const [name, setName] = useState('unknown')
 
@@ -144,5 +144,3 @@ function Home() {
     </>
   )
 }
-
-export default Home
