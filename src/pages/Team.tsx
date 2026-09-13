@@ -8,7 +8,7 @@ export function Team() {
       <h1>Equipe</h1>
       {teamMembers.map((member) => (
         <h3 key={member.id}>
-          <Link to={`/nossa-equipe/${member.id}`}>{member.name}</Link>
+          <Link to={`/nossa-equipe/${member.id}`} viewTransition>{member.name}</Link>
         </h3>
       ))}
     </>

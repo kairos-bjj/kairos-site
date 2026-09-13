@@ -8,7 +8,7 @@ export function Blog() {
       <h1>Posts</h1>
       {blogPosts.map((post) => (
         <h3 key={post.id}>
-          <Link to={`/blog/${post.id}`}>{post.title}</Link>
+          <Link to={`/blog/${post.id}`} viewTransition>{post.title}</Link>
         </h3>
       ))}
     </>
