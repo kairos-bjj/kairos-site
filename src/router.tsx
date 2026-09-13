@@ -3,13 +3,13 @@ import { createBrowserRouter } from 'react-router'
 import { MainLayout } from './components/MainLayout'
 import  { Home }  from './pages/Home'
 import { About } from './pages/About'
-import { Blog } from './pages/Blog'
-import { BlogPost } from './pages/BlogPost'
+import { Blog, blogLoader } from './pages/Blog'
+import { BlogPost, blogPostLoader } from './pages/BlogPost'
 import { Contact } from './pages/Contact'
 import { PrivacyPolicy } from './pages/PrivacyPolicy'
 import { TermsOfService } from './pages/TermsOfService'
-import { Team } from './pages/Team'
-import { TeamMember } from './pages/TeamMember'
+import { Team, teamLoader } from './pages/Team'
+import { TeamMember, teamMemberLoader } from './pages/TeamMember'
 
 
 export const router = createBrowserRouter([ // list of Route objects
@@ -27,12 +27,12 @@ export const router = createBrowserRouter([ // list of Route objects
       { path: 'contato', Component: Contact },
 
       { path: 'blog', children: [
-        {index: true, Component: Blog}, // +loader: blogPostsLoader
-        {path: ':postId', Component: BlogPost},]}, // +loader: postLoader
-        
+        {index: true, Component: Blog, loader: blogLoader},
+        {path: ':postId', Component: BlogPost, loader: blogPostLoader}]},
+
       { path: 'nossa-equipe', children: [
-        { index: true, Component: Team,}, // +loader: teamListLoader
-        { path: ':memberId', Component: TeamMember} ]}
+        { index: true, Component: Team, loader: teamLoader},
+        { path: ':memberId', Component: TeamMember, loader: teamMemberLoader}]}
     ]
   },
 ])
