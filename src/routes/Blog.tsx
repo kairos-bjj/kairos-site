@@ -1,5 +1,5 @@
 import { Link, useLoaderData } from 'react-router'
-import type { BlogPostSummary } from '../types/interface'
+import type { BlogPostSummary } from '../types'
 
 export async function blogLoader() {
   const res = await fetch('/api/blog')

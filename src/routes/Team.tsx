@@ -1,5 +1,5 @@
 import { Link, useLoaderData } from 'react-router'
-import type { TeamMember } from '../types/interface'
+import type { TeamMember } from '../types'
 
 export async function teamLoader() {
   const res = await fetch('/api/team')

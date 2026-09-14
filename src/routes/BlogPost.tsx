@@ -1,5 +1,5 @@
 import { useLoaderData, type LoaderFunctionArgs } from 'react-router'
-import type { BlogPost } from '../types/interface'
+import type { BlogPost } from '../types'
 
 export async function blogPostLoader({ params }: LoaderFunctionArgs) {
   const res = await fetch(`/api/blog/${params.postId}`)

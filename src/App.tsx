@@ -1,9 +1,8 @@
-// src/components/Layout.tsx
 import { Outlet } from 'react-router'
-import { Header } from './Header'
-import { Footer } from './Footer'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
-export function MainLayout() {
+export function App() {
   return (
     <>
       <Header />

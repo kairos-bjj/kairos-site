@@ -1,5 +1,4 @@
-// worker/mock-data.ts
-import type { TeamMember, BlogPost } from '../src/types/interface.ts'
+import type { TeamMember, BlogPost } from '../src/types/index.ts'
 
 export const teamMembers: TeamMember[] = [
   { id: 'professor', name: 'Fulano da Silva', role: 'Professor' },

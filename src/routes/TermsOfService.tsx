@@ -1,5 +1,3 @@
-TermsOfService
-
 export function TermsOfService(){
     return(
         <>
